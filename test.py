@@ -49,3 +49,13 @@ variables = (constraints_manager.to_variables('t1', len(test['t1'])))
 constraints =  constraints_manager.gen_constraints('t1', len(test['t1']))
 '''
 
+import networkx as nx
+import matplotlib.pyplot as plt
+
+G = nx.Graph()
+G.add_nodes_from(t1.keys())
+G.add_edges_from(valid_graph)
+
+nx.draw(G, with_labels=True)
+plt.show()
+print(nx.algorithms.approximation.max_clique(G))
