@@ -2,7 +2,6 @@ import itertools
 import networkx as nx
 import matplotlib.pyplot as plt
 
-import constraints
 
 class graph_handler:
 

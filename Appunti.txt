@@ -1,0 +1,18 @@
+Trovato il modo di compilare il dataset in un grafo usando networkx
+
+
+per quanto riguarda apriori su grafi, secondo chatgpt esistono queste versioni
+    FSG (Frequent Subgraph Mining): This is one of the earliest and widely used algorithms for mining frequent subgraphs from a graph database. FSG uses a depth-first search approach to identify all possible subgraphs and prunes those that do not meet the minimum support threshold.
+
+    Gaston: Gaston is a graph mining algorithm that works on directed, labeled graphs. The algorithm uses a depth-first search strategy to generate all subgraphs and employs a branch-and-bound technique to prune the search space.
+
+    GERM (Graph EM for Mining): GERM is an algorithm for mining frequent subgraphs from a graph database using the EM algorithm. The algorithm iteratively updates the probability of each subgraph and selects the frequent subgraphs with a support greater than the minimum threshold.
+
+    MoFa (Molecular Fragment Miner): MoFa is an algorithm for mining frequent molecular fragments from large chemical databases. The algorithm uses a modified version of Apriori algorithm that takes into account the connectivity and labeling of atoms in the molecules.
+
+    GraMi (Graph Mining): GraMi is a frequent subgraph mining algorithm that can handle both directed and undirected graphs. The algorithm uses a hybrid approach that combines a depth-first search with a breadth-first search to generate and prune the subgraph candidates.
+
+A me serviva solo la parte di generazione dei nuovi itemset candidati, che fosse efficiente.
+Verosimilmente si può lanciare il dataset direttamente dentro uno di questi algoritmi, dati sufficienti massaggini.
+
+Mi sono concentrato su Gaston, che mi sembrava più appropriato per il mio caso. Sono andato a leggere di un'implementazione opensource in python (https://github.com/ColinConduff/FrequentSubgraphMining) come funzionasse la generazione dei nuovi candidati, senza successo.

@@ -9,11 +9,9 @@ def relationship(node1, node2):
     val2 = node2[1]
 
     # Late, if a late b
-    #if val1[0] <= val2[0] and val1[0] <= val2[1]:
     if val1[0] >= val2[1]:
         type = 'L'
         orientation = (name1, name2)
-    #elif val1[1] >= val2[0] and val1[1] >= val2[1]:
     elif val1[1] <= val2[0]:
         type = 'L'
         orientation = (name2, name1)

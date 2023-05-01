@@ -29,6 +29,6 @@ nx.draw_networkx(test, ax=axs[1], with_labels=True, labels = {i: (j['class_name'
 fig.show()
 
 print(graph_handler.is_present(G, test))
-
-
 plt.show()
+
+# Graph apriori
